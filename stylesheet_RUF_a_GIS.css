@@ -1,0 +1,272 @@
+/* stylesheet.css
+ * CSS sheet for the RUF-a-GIS webpage
+ * Made on 24-09-2015
+ * By GeOdin
+ */
+
+/*
+ * Positioning
+ * http://learnlayout.com/position.html
+ * Only transparent background with not transparent text for chat:
+ * * http://stackoverflow.com/questions/5135019/css-opacity-only-to-background-color-not-the-text-on-it
+ * * * #div {
+    background: rgb(54, 25, 25); /* Fall-back for browsers that don't
+                                    support rgba */
+    background: rgba(54, 25, 25, .5);
+}
+ * * * or even only the rgba(..)
+ * show divs on top of google maps
+ * * http://jsfiddle.net/9qDhX/
+ * vertical-align the text of the gameWon text
+ * make sure gameWon resizes properly when the window is made smaller
+ */
+
+body {
+	background-color: white;
+	color: white;
+}
+
+#wholePage {
+	position: relative;
+	text-align: center;
+}
+
+#map {
+	display: none;
+	height: 98vh;
+}
+
+#turn {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 0.5%;
+	width: 25%;
+	height: 43.75vh;
+	background-color: transparent;
+	//z-index: 99;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+#player {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#question {
+	display: none;
+	position: relative;
+	text-align: left;
+	width: 98%;
+	height: 80%;
+	left: 1%;
+	overflow-y: auto;
+}
+
+#locationName {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 25.5%;
+	width: 48%;
+	height: 11.75vh;
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	font-size: 2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+#draw {
+	position: absolute;
+	display: none;
+	top: 5.5%;
+	left: 73.5%;
+	width: 25%;
+	height: 17.75vh;
+	background-color: transparent;
+	//z-index: 99;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+#toggleDrawButton {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#drawPoint {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#drawLine {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#drawPolygon {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#saveDrawing {
+	display: none;
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	border-radius: 2px;
+}
+
+#boardGameUp {
+	position: absolute;
+	display: none;
+	top: 17.5%;
+	left: 25.5%;
+	width: 48%;
+	height: 12.75vh;
+	background-color: transparent;
+	//z-index: 99;
+	background: rgba(255, 165, 0, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+#boardGameLeft {
+	position: absolute;
+	display: none;
+	top: 30.5%;
+	left: 25.5%;
+	width: 11.75%;
+	height: 42.625vh;
+	background-color: transparent;
+	//z-index: 99;
+	background: rgba(0, 0, 229, .14);
+	color: white;30-sep-2015 16:55
+	text-shadow: 1px 1px #000000;
+}
+
+#boardGameRight {
+	position: absolute;
+	display: none;
+	top: 30.5%;
+	left: 61.75%;
+	width: 11.75%;
+	height: 42.625vh;
+	background-color: transparent;
+	//z-index: 99;
+	background: rgba(02, 48, 150, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+#boardGameDown {
+	position: absolute;
+	display: none;
+	top: 74%;
+	left: 25.5%;
+	width: 48%;
+	height: 12.75vh;
+	background-color: transparent;
+	//z-index: 99;
+	background: rgba(0, 127, 0, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+#chat {
+	position: absolute;
+	display: none;
+	top: 50%;
+	left: 0.5%;
+	width: 25%;
+	height: 48vh;
+	background-color: transparent;
+	//z-index: 99;
+	background: rgba(00, 99, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#chatTitle {
+	position: relative;
+	width: 96%;
+	height: 1.3em;
+	left: 2%;
+	font-size: 1.2em;
+	color: #ABABAB;
+	background-color: white;
+	text-shadow: 1px 1px #000000;
+	border-radius: 2px;
+}
+
+#chatText {
+	position: relative;
+	text-align: left;
+	width: 98%;
+	left: 1%;
+}
+
+#gameWon {
+	position: absolute;
+	display: none;
+	top: 87%;
+	left: 25.5%;
+	width: 48%;
+	height: 11.75vh;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	font-size: 2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+/*#playerAmount {
+	display: block;
+	left: 50%;
+	top: 50%;
+	font-size: 3.6em;
+}*/

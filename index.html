@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- 
+index.html
+Main Page for the RUF-a-GIS game
+Made on 24-09-2015
+by GeOdin -->
+
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<script type="text/javascript">
+			function confirmStart() {
+				if (confirm("Ready to start a RUF-a-GIS game? ") == true) {
+					window.open("RUF_a_GIS.html", "_self");
+				}
+			}
+		</script>
+		<title>
+			RUF-a-GIS game
+		</title>
+	</head>
+
+	<body>
+		<div id="wholePage">
+		<a href="#" onclick="confirmStart()">
+			<div id="title">
+				<div id="mainTitle">
+					RUF-a-GIS
+				</div>
+				<div id="subTitle">
+					The board game to understand the RUF
+				</div>
+			</div>
+		</a>
+		</div>
+	</body>
+</html>
